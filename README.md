@@ -122,18 +122,25 @@ mvn spring-boot:run
 Una vez que la aplicación esté corriendo, puedes probar el endpoint:
 
 ```bash
-GET http://localhost:8080/process?input=HolaMundo
+curl "http://localhost:8080/pipeline?number=13"
 ```
 
 Respuesta esperada:
 
 ```bash
-{
-  "original": "HolaMundo",
-  "processed": "HOLA_MUNDO"
-}
+El número es IMPAR ❌
 ```
 
+Y si probás con un número par:
 
+```bash
+curl "http://localhost:8080/pipeline?number=10"
+```
+
+Respuesta:
+
+```bash
+El número es PAR ✅
+```
 
 
