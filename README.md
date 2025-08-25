@@ -4,6 +4,40 @@ Este proyecto es un ejemplo de cómo implementar el **Patrón Pipeline** usando 
 
 ---
 
+📂 Estructura del proyecto
+```bash
+proyecto_pipeline/
+│── src/
+│   ├── main/
+│   │   ├── java/com/example/pipeline/
+│   │   │   ├── PipelineApplication.java      # Clase principal
+│   │   │   ├── controller/
+│   │   │   │   └── PipelineController.java   # REST Controller
+│   │   │   ├── pipeline/
+│   │   │   │   ├── Pipeline.java             # Interfaz del pipeline
+│   │   │   │   ├── UppercaseStep.java        # Paso 1: convierte a mayúsculas
+│   │   │   │   └── AddSuffixStep.java        # Paso 2: agrega sufijo
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/com/example/pipeline/
+│           └── PipelineApplicationTests.java
+│
+│── pom.xml
+│── README.md
+```
+---
+
+🛠 Tecnologías usadas
+
+- Java 17
+- Spring Boot 3.5.x
+- Maven 3.9.x
+
+
+
+---
+
 ## 📌 Requisitos previos
 
 Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
@@ -99,36 +133,6 @@ Respuesta esperada:
   "processed": "HOLA_MUNDO"
 }
 ```
-
-📂 Estructura del proyecto
-```bash
-proyecto_pipeline/
-│── src/
-│   ├── main/
-│   │   ├── java/com/example/pipeline/
-│   │   │   ├── PipelineApplication.java      # Clase principal
-│   │   │   ├── controller/
-│   │   │   │   └── PipelineController.java   # REST Controller
-│   │   │   ├── pipeline/
-│   │   │   │   ├── Pipeline.java             # Interfaz del pipeline
-│   │   │   │   ├── UppercaseStep.java        # Paso 1: convierte a mayúsculas
-│   │   │   │   └── AddSuffixStep.java        # Paso 2: agrega sufijo
-│   │   └── resources/
-│   │       └── application.properties
-│   └── test/
-│       └── java/com/example/pipeline/
-│           └── PipelineApplicationTests.java
-│
-│── pom.xml
-│── README.md
-```
-🛠 Tecnologías usadas
-
-- Java 17
-- Spring Boot 3.5.x
-- Maven 3.9.x
-
-
 
 
 
